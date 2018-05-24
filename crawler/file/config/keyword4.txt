@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# 配置文件键值对中如果要表示%，请用"%%"代替"%"
+# base_url字段表示被抓取网页url，url变化部分用{}代替
+[keys]
+deadline = Final paper due
+
+[other]
+language = en
+dateformat = [0-9]{1,2}-[0-9]{1,2} *[A-Za-z]+ *[0-9]{4}

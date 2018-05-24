@@ -1,0 +1,8 @@
+2018-04-22 12:23:27 main.py INFO  主进程id为：	5780
+2018-04-22 12:23:48 main.py INFO  所有子进程执行完
+2018-04-22 12:23:48 main.py INFO  
+异常信息：Document is empty
+ 
+2018-04-22 12:23:48 main.py INFO  进程-process0 本次爬取0个网址
+
+2018-04-22 12:23:48 main.py INFO  进程-process0 未解析的URL的数量为：	0

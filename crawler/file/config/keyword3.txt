@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+# 配置文件键值对中如果要表示%，请用"%%"代替"%"
+# base_url字段表示被抓取网页url，url变化部分用{}代替
+[keys]
+deadline = Draft paper submission deadline,Final paper submission deadline
+acceptance = Draft paper acceptance notification
+
+[other]
+language = en
+# startdateformat1匹配时间格式：15-16 Oct 2017或15 Oct 2017
+# startdateformat2匹配时间格式：15 Sep -10 Sep 2017
+# enddateformat1匹配时间格式：同startdateformat1
+# enddateformat2匹配时间格式：同startdateformat2
+# deadlineformat1匹配时间格式：2017-09-25
+startdateformat1 = [0-9]{1,2}(?:-[0-9]{1,2})? +[a-zA-Z]{3,} +[0-9]{4}
+startdateformat2 = [0-9]{1,2} +[a-zA-Z]{3,} +-[0-9]{1,2} +[a-zA-Z]{3,} +[0-9]{4}
+enddateformat1 = [0-9]{1,2} +[a-zA-Z]{3,} +[0-9]{4}
+enddateformat2 = [0-9]{1,2} +[a-zA-Z]{3,} +-[0-9]{1,2} +[a-zA-Z]{3,} +[0-9]{4}
+deadlineformat1 = [0-9]{4}-[0-9]{1,2}-[0-9]{1,2}
+acceptanceformat1 = [0-9]{4}-[0-9]{1,2}-[0-9]{1,2}
+# locationformat1匹配地点格式：Berlin,Germany Baden-Wuerttemberg · Germany Xi'an, China Shaanxi  .  China
+locationformat1 = [\'a-zA-Z]+,.+ +\. +\w+
+
+

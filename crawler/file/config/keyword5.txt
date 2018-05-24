@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# 配置文件键值对中如果要表示%，请用"%%"代替"%"
+# base_url字段表示被抓取网页url，url变化部分用{}代替
+[keys]
+startdate = Conference Dates
+enddate = Conference Dates
+deadline = Submission Deadline
+website = Conference & Submission Link
+[other]
+language = en
+enddateformat1 = - *[a-zA-Z]{3} *[0-9]{1,2}, *[0-9]{4}
+renddateformat1 = [a-zA-Z]{3} *[0-9]{1,2}, *[0-9]{4}
+startdateformat1 = [a-zA-Z]{3} *[0-9]{1,2}, *[0-9]{4} *-
+rstartdateformat1 = [a-zA-Z]{3} *[0-9]{1,2}, *[0-9]{4}
+deadlineformat1 = day *[0-9]{1,2} *[a-zA-Z]{3} *[0-9]{4}
+rdeadlineformat1 = [0-9]{1,2} *[a-zA-Z]{3} *[0-9]{4}

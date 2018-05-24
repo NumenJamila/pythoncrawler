@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+# 配置文件键值对中如果要表示%，请用"%%"代替"%"
+[keys]
+enname = 会议名称(英文)
+tag = 所属学科
+sponsor = 主办单位
+enddate = 结束日期
+deadline = 截稿日期
+website = 会议网站
+[other]
+language = cn
+dateformat = [0-9]{4}-[0-9]{1,2}-[0-9]{1,2}
