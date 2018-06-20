@@ -1,8 +1,47 @@
-2018-04-22 12:23:27 main.py INFO  主进程id为：	5780
-2018-04-22 12:23:48 main.py INFO  所有子进程执行完
-2018-04-22 12:23:48 main.py INFO  
-异常信息：Document is empty
- 
-2018-04-22 12:23:48 main.py INFO  进程-process0 本次爬取0个网址
+2018-06-20 11:01:26 main.py INFO  主进程id为：	1540
+2018-06-20 11:01:33 main.py INFO  所有子进程执行完
+2018-06-20 11:01:33 main.py INFO  进程-process0 本次爬取50个网址
 
-2018-04-22 12:23:48 main.py INFO  进程-process0 未解析的URL的数量为：	0
+2018-06-20 11:01:33 main.py INFO  进程-process0 未解析的URL的数量为：	6
+2018-06-20 11:01:33 main.py INFO  进程-process4 本次爬取100个网址
+
+2018-06-20 11:01:33 main.py INFO  进程-process4 未解析的URL的数量为：	32
+2018-06-20 11:01:33 main.py INFO  进程-process2 本次爬取20个网址
+
+2018-06-20 11:01:33 main.py INFO  进程-process2 未解析的URL的数量为：	15
+2018-06-20 11:01:33 main.py INFO  进程-process3 本次爬取16个网址
+
+2018-06-20 11:01:33 main.py INFO  进程-process3 未解析的URL的数量为：	0
+2018-06-20 11:01:33 main.py INFO  
+异常信息：'Response' object has no attribute 'split'
+ 
+2018-06-20 11:01:33 main.py INFO  进程-process1 本次爬取0个网址
+
+2018-06-20 11:01:33 main.py INFO  进程-process1 未解析的URL的数量为：	0
+2018-06-20 11:01:33 main.py INFO  守护saver的进程： pid = 2568 is start
+2018-06-20 11:01:58 main.py INFO  所有子进程执行完
+2018-06-20 11:01:58 main.py INFO  进程-process3 本次爬取16个网址
+
+2018-06-20 11:01:58 main.py INFO  进程-process3 未解析的URL的数量为：	0
+2018-06-20 11:01:58 main.py INFO  进程-process0 本次爬取50个网址
+
+2018-06-20 11:01:58 main.py INFO  进程-process0 未解析的URL的数量为：	0
+2018-06-20 11:01:58 main.py INFO  进程-process4 本次爬取100个网址
+
+2018-06-20 11:01:58 main.py INFO  进程-process4 未解析的URL的数量为：	0
+2018-06-20 11:01:58 main.py INFO  进程-process2 本次爬取20个网址
+
+2018-06-20 11:01:58 main.py INFO  进程-process2 未解析的URL的数量为：	0
+2018-06-20 11:01:58 main.py INFO  
+异常信息：'Response' object has no attribute 'split'
+ 
+2018-06-20 11:01:58 main.py INFO  进程-process1 本次爬取0个网址
+
+2018-06-20 11:01:58 main.py INFO  进程-process1 未解析的URL的数量为：	0
+2018-06-20 11:01:59 main.py INFO  守护saver的进程： pid = 4992 is start
+2018-06-20 11:02:18 main.py INFO  		抓取数据的进程任务结束
+
+2018-06-20 11:02:20 main.py INFO  程序总共运行时间为 0:00:53.646068
+2018-06-20 11:11:00 main.py INFO  		抓取数据的进程任务结束
+
+2018-06-20 11:11:02 main.py INFO  程序总共运行时间为 0:10:00.615058

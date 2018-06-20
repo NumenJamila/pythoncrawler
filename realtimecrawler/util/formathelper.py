@@ -1,96 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2018/5/8 15:23
-# @Author  : ZengJunMing
-# @File    : tools.py
-
 import re
-import random
-import requests
-import sys
+import traceback
 
-
-class SpiderApi(object):
-    user_agents = [
-        "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/43.0.2357.134 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/53.0.2785.104 Safari/537.36 Core/1.53.2595.400 QQBrowser/9.6.10872.400",
-        "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0",
-        "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko)"
-        "Chrome/18.0.1025.133 Mobile Safari/535.19"
-    ]
-    content_type = 'application/x-www-form-urlencoded'
-    accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-    referer = ""
-
-    @classmethod
-    def getRequestHeader(cls):
-        header = {}
-        header['User-Agent'] = cls.user_agents[random.randint(0, len(cls.user_agents) - 1)]
-        header['Accept'] = cls.accept
-        header['Content-Type'] = cls.content_type
-        return header
-
-    @classmethod
-    def getBinContent(cls,url):
-        headers = cls.getRequestHeader()
-        content = requests.get(url, headers=headers)  # 返回一个Response对象
-        print("状态码：{s}".format(s=content.status_code))
-        return content
-
-    @classmethod
-    def getPageSourceCode(cls, url):
-        headers = cls.getRequestHeader()
-        html = ""
-        try:
-            start_html = requests.get(url, headers=headers)  # 返回一个Response对象
-            print("状态码：{s}".format(s=start_html.status_code))
-            start_html.raise_for_status()
-            # response内容的编码
-            header_code = start_html.encoding
-            # response返回的html header标签里设置的编码
-            html_header_code = requests.utils.get_encodings_from_content(start_html.text)
-            if header_code == 'ISO-8859-1':
-                if html_header_code:
-                    html_header_code = html_header_code[0]
-                else:
-                    html_header_code = start_html.apparent_encoding
-                encode_content = start_html.content.decode(html_header_code, 'replace').encode('utf-8', 'replace')
-                html = encode_content.decode('utf-8')
-            else:
-                html = start_html.text
-        except:
-            print("class SpiderApi.getPageSourceCode()异常信息：{}".format(sys.exc_info()))
-        finally:
-            return html
-
-    @classmethod
-    def getPageSourceCodeByPost(cls, url, dictionary, cookie=None):
-        html = ""
-        headers = cls.getRequestHeader()
-        try:
-            if cookie is not None:
-                html = requests.post(url, data=dictionary, headers=headers, cookies=cookie)
-            else:
-                html = requests.post(url, data=dictionary, headers=headers)
-            print("状态码：{s}".format(s=html.status_code))
-            html.raise_for_status()  # 响应状态码大于400将抛出异常
-            content_coding = html.encoding  # 获取响应报文数据部分编码
-            # 获取html页面里设置的编码
-            page_encoding = requests.utils.get_encodings_from_content(html.text)
-            if content_coding == 'ISO-8859-1':
-                if page_encoding is not None:
-                    page_encoding = page_encoding[0]
-                else:
-                    page_encoding = html.apparent_encoding
-                    encoding_content = html.content.decode(page_encoding, 'replace').encode('utf-8', 'replace')
-                    html = encoding_content.decode('utf-8')
-            else:
-                html = html.text
-        except:
-            print("异常信息：{exception}".format(exception=sys.exc_info()))
-        return html
+from multiprocessing import Queue
 
 
 class DateFormatHelper(object):
@@ -107,7 +18,7 @@ class DateFormatHelper(object):
     monthMap2 = {"September": "9", "October": "10", "November": "11", "December": "12",
                  "January": "1", "February": "2", "August": "8", "July": "7",
                  "June": "6", "May": "5", "April": "4", "March": "3"}
-    monthMap = {"sep.": "9", "oct.": "10", "nov.": "11", "dec.": "12", "jan.": "1", "feb.": "2",
+    monthMap3 = {"sep.": "9", "oct.": "10", "nov.": "11", "dec.": "12", "jan.": "1", "feb.": "2",
                 "aug.": "8", "jul.": "7", "jun.": "6", "may.": "5", "apr.": "4", "mar.": "3"}
     @classmethod
     def convertStandardDateFormat(cls, datestr: str) -> str:
@@ -134,7 +45,7 @@ class DateFormatHelper(object):
                             month = cls.monthMap2.get(str(items[1]))
                         dayrange = str(items[0])
                         day = dayrange[0:dayrange.index("-")]
-                        day2 = dayrange[dayrange.index("-") + 1:dayrange.index(",")]
+                        day2 = dayrange[dayrange.index("-") + 1:]
                         res = year + "-" + month + "-" + day
                         res2 = year + "-" + month + "-" + str(day2)
                     elif i == 1:
@@ -177,8 +88,55 @@ class DateFormatHelper(object):
                         res = year + "-" + month + "-" + day
                     else:
                         res = datestr
-                    print(res)
+                    print(res + "\n" + res2)
                     break
             except Exception as e:
                 print("convertStandardDateFormat方法出现异常{}".format(e))
         return res, res2
+
+
+class Conference(object):
+    def __init__(self, dic: dict):
+        self.cnName = dic.get("cnName")
+        self.enName = dic.get("enName")
+        self.tag = dic.get("tag")
+        self.location = dic.get("location")
+        self.sponsor = dic.get("sponsor")
+        self.startdate = dic.get("startdate")
+        self.enddate = dic.get("enddate")
+        self.website = dic.get("website")
+        self.deadline = dic.get("deadline")
+        self.acceptance = dic.get("acceptance")
+        self.name = self.getname()
+
+    def getname(self):
+        if self.cnName is not None:
+            return self.cnName
+        if self.enName is not None:
+            return self.enName
+        return None
+
+    def __eq__(self, other):
+        if isinstance(other, self.__class__):
+            return (self.cnName == other.cnName or self.enName == other.enName) \
+                   and self.website == other.website
+        else:
+            return False
+
+    def __ne__(self, other):
+        return (not self.__eq__(other))
+
+    def __hash__(self):
+        if self.name is not None and self.website is not None:
+            return hash(self.name + self.website)
+        elif self.name is not None:
+            return hash(self.name)
+        elif self.website is not None:
+            return hash(self.website)
+        else:
+            return self.__hash__()
+
+    def __str__(self):
+        return "ObjectType: Model; hashcode: {0}\n" \
+               "cnName:\t{1}\nwebsite:\t{2}\nenName:\t{3}" \
+            .format(self.__hash__(), self.cnName, self.website, self.enName)

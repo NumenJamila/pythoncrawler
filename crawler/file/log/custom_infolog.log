@@ -1,0 +1,71 @@
+2018-06-20 11:02:17 worker.py INFO  
+	save conference process 4496 is starting
+
+
+2018-06-20 11:03:45 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:03:45 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:03:45 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:03:45 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:03:46 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:03:46 worker.py INFO  抓取的数据去重后的数量为：19
+2018-06-20 11:03:46 worker.py INFO  当前抓取的数据数量为：19
+2018-06-20 11:03:46 worker.py INFO  抓取的数据去重后的数量为：19
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,tag,location,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,startdate,cnName,website) values(%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:21 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:21 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:07:21 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:21 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:07:22 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:22 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:07:22 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:22 worker.py INFO  抓取的数据去重后的数量为：11
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:11:00 worker.py INFO  self.flag = True
+
+2018-06-20 11:11:00 worker.py INFO  集合中还剩下 13 条数据
+2018-06-20 11:11:00 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:00 worker.py INFO  抓取的数据去重后的数量为：13
+2018-06-20 11:11:00 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:00 worker.py INFO  抓取的数据去重后的数量为：13
+2018-06-20 11:11:01 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:01 worker.py INFO  抓取的数据去重后的数量为：13
+2018-06-20 11:11:01 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:01 worker.py INFO  抓取的数据去重后的数量为：0

@@ -27,32 +27,32 @@ def showDict(dic: dict):
     print("callback -----> {}".format(dic))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # 清空日志内容
-    clearContent('file/log/debug.log')
-    clearContent('file/log/info.log')
+    clearContent("file/log/debug.log")
+    clearContent("file/log/info.log")
 
     startTime = datetime.datetime.now()
 
     # 加载日志配置文件
-    logger = loadLogger('file/log/applogconfig.ini')
+    logger = loadLogger("file/log/applogconfig.ini")
     logger.info("主进程id为：\t{}".format(os.getpid()))
 
     # 读取爬虫配置文件
-    configFileNames = getFileNames('file/config/')
-    findConf = lambda name: name[name.rindex('.') + 1:].lower() == 'conf'
-    findTxt = lambda name: name[name.rindex('.') + 1:].lower() == 'txt'
+    configFileNames = getFileNames("file/config/")
+    findConf = lambda name: name[name.rindex(".") + 1 :].lower() == "conf"
+    findTxt = lambda name: name[name.rindex(".") + 1 :].lower() == "txt"
     # 获取file/config/目录下所有的*.conf配置文件
     confConfigFileNames = list(filter(findConf, configFileNames))
     # 获取file/config/目录下所有的*.txt配置文件
     txtConfigFileNames = list(filter(findTxt, configFileNames))
-    logger.debug('\nfile/config/目录下的.conf文件有：\n{}\n'.format(confConfigFileNames))
-    logger.debug('\nfile/config/目录下的.txt文件有：\n{}\n'.format(txtConfigFileNames))
+    logger.debug("\nfile/config/目录下的.conf文件有：\n{}\n".format(confConfigFileNames))
+    logger.debug("\nfile/config/目录下的.txt文件有：\n{}\n".format(txtConfigFileNames))
     savejsonfilenames = []  # 初次抓取的目标信息保存的路径
 
     # 生成初次爬取信息的临时文件名
     for i in range(1, len(confConfigFileNames) + 1):
-        name = 'file/log/{}.json'.format(i)
+        name = "file/log/{}.json".format(i)
         savejsonfilenames.append(name)
     processlist = []
 
@@ -61,10 +61,10 @@ if __name__ == '__main__':
 
     # for i in range(0, 1):
     for i in range(0, len(confConfigFileNames)):
-        processname = 'process{}'.format(i)
-        sourcecodedealProcess = HtmlCodeHandler(confConfigFileNames[i],
-                                                savejsonfilenames[i],
-                                                processname, debuglogqueue)
+        processname = "process{}".format(i)
+        sourcecodedealProcess = HtmlCodeHandler(
+            confConfigFileNames[i], savejsonfilenames[i], processname, debuglogqueue
+        )
         processlist.append(sourcecodedealProcess)
         sourcecodedealProcess.start()
     for p in processlist:
@@ -103,12 +103,12 @@ if __name__ == '__main__':
 
     itemqueue = Queue()
 
-    resultFileName = 'file/log/result.json'
+    resultFileName = "file/log/result.json"
     removeFile(resultFileName)
-    writeToFile(resultFileName, '[\n')
+    writeToFile(resultFileName, "[\n")
 
     # 创建进程池
-    processpool = Pool(processes=3)
+    processpool = Pool(processes=2)
 
     #  创建1个用于保存解析完成后的会议信息进程, 解析的会议字典满20条保存一次
     saver = Saver(itemqueue, "saveprocess", 20, resultFileName)
@@ -116,7 +116,9 @@ if __name__ == '__main__':
     # saver.daemon = True
     poolclose = Value(ctypes.c_bool, False)
 
-    guarder = GuardWorkerProcess(itemqueue, "saveprocess", 20, resultFileName, saver, poolclose)
+    guarder = GuardWorkerProcess(
+        itemqueue, "saveprocess", 20, resultFileName, saver, poolclose
+    )
     saver.start()
     guarder.start()
     logger.info("守护saver的进程： pid = {} is start".format(guarder.pid))
@@ -129,13 +131,12 @@ if __name__ == '__main__':
     f = lambda tup: tup[0] if tup else ""
     maprows = map(f, rows)
     content = "\n".join(maprows)
-    filterwords = set(content.split('\n'))
+    filterwords = set(content.split("\n"))
     # 将停用词写到 stop_words.txt 文件里
-    writeToFile("file/txt/stop_words.txt", content, pattern='w+')
+    writeToFile("file/txt/stop_words.txt", content, pattern="w+")
 
     # 查询关键词到Tag的映射
-    keywords_map_tag_sql = "select `name`,directionName from ResearchDirection,Tags " \
-                           "where rdid = directionId"
+    keywords_map_tag_sql = "select `name`,directionName from ResearchDirection,Tags " "where rdid = directionId"
 
     keyword2tagtuple = Mysql.queryData(keywords_map_tag_sql)
     keyword2tagmap = {}
@@ -150,12 +151,22 @@ if __name__ == '__main__':
         keywordConfFile = txtConfigFileNames[i]
         params = readKeywordCongig(keywordConfFile)
         for j in range(0, len(itemdics[i])):
-            processName = 'process{}'.format(j)
+            processName = "process{}".format(j)
             # print("j = {}".format(j))
-            processpool.apply_async(parseSubPage,
-                                    (confDictionary2, itemdics[i][j], domain, processName,
-                                     params[0], params[1], keyword2tagmap, filterwords),
-                                    callback=put)
+            processpool.apply_async(
+                parseSubPage,
+                (
+                    confDictionary2,
+                    itemdics[i][j],
+                    domain,
+                    processName,
+                    params[0],
+                    params[1],
+                    keyword2tagmap,
+                    filterwords,
+                ),
+                callback=put,
+            )
 
     processpool.close()
     processpool.join()
@@ -168,10 +179,13 @@ if __name__ == '__main__':
 
     while not guarder.guardIsExit.value:
         time.sleep(2)
-        print("守护进程:guarder.guardIsExit  = {}, pid = {}"
-              .format(guarder.guardIsExit.value, guarder.pid))
+        print(
+            "守护进程:guarder.guardIsExit  = {}, pid = {}".format(
+                guarder.guardIsExit.value, guarder.pid
+            )
+        )
 
-    writeToFile(resultFileName, '\n{}\n]')
+    writeToFile(resultFileName, "\n{}\n]")
 
     finishTime = datetime.datetime.now()
     logger.info("程序总共运行时间为 {}".format(finishTime - startTime))

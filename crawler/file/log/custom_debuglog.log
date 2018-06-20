@@ -1,0 +1,195 @@
+2018-06-20 11:02:17 worker.py INFO  
+	save conference process 4496 is starting
+
+
+2018-06-20 11:03:45 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:03:45 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:03:45 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:03:45 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:03:46 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:03:46 worker.py INFO  抓取的数据去重后的数量为：19
+2018-06-20 11:03:46 worker.py INFO  当前抓取的数据数量为：19
+2018-06-20 11:03:46 worker.py INFO  抓取的数据去重后的数量为：19
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': '(CGIIT)2019第三届图形、图像和交互技术国际会议', 'enName': None, 'tag': '人机交互与普适计算', 'location': '广东', 'sponsor': 'APISE', 'startdate': datetime.datetime(2019, 2, 22, 0, 0), 'enddate': datetime.datetime(2019, 2, 24, 0, 0), 'website': 'http://www.cgiit.org/', 'deadline': None, 'acceptance': None, 'name': '(CGIIT)2019第三届图形、图像和交互技术国际会议', '_id': ObjectId('5b29c41241c95a167c5d11ef')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '1st International Workshop on Modeling, Verification and Testing of Dependable Critical Systems', 'tag': 'Language & LinguisticsEngineering, Computing & Technology', 'location': '24-26 Oct 2018 Marrakech  .  Morocco', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 24, 0, 0), 'enddate': datetime.datetime(2018, 10, 26, 0, 0), 'website': 'https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines', 'deadline': datetime.datetime(2018, 6, 15, 0, 0), 'acceptance': '2018-06-30', 'name': '1st International Workshop on Modeling, Verification and Testing of Dependable Critical Systems', '_id': ObjectId('5b29c41241c95a167c5d11f0')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '2nd International Workshop on Cybersecurity and Functional Safety in Cyber-Physical Systems', 'tag': 'Engineering, Computing & TechnologyComputer Science & EngineeringInformation Technology & Communications SystemsTechnology R & D/Management', 'location': '24-26 Oct 2018   .  Morocco', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 24, 0, 0), 'enddate': datetime.datetime(2018, 10, 26, 0, 0), 'website': 'https://onlinelibrary.wiley.com/doi/epdf/10.1002/smr.1955', 'deadline': datetime.datetime(2018, 6, 1, 0, 0), 'acceptance': '2018-07-02', 'name': '2nd International Workshop on Cybersecurity and Functional Safety in Cyber-Physical Systems', '_id': ObjectId('5b29c41241c95a167c5d11f1')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': '【CEECT 2019】2019电力工程与控制技术国际会议', 'enName': None, 'tag': '自动化技术', 'location': '新加坡', 'sponsor': 'APISE', 'startdate': datetime.datetime(2019, 12, 5, 0, 0), 'enddate': datetime.datetime(2019, 12, 7, 0, 0), 'website': 'http://www.ceect.org/', 'deadline': None, 'acceptance': None, 'name': '【CEECT 2019】2019电力工程与控制技术国际会议', '_id': ObjectId('5b29c41241c95a167c5d11f2')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '4th ACM Workshop on Cyber-Physical Systems Security & Privacy', 'tag': 'Engineering, Computing & TechnologyAI, Robotics & Automatic ControlComputer Science & EngineeringInformation Technology & Communications SystemsComputer Science, Technology & ApplicationsTechnology R & D/ManagementTelecommunications Technology', 'location': '19 Oct 2018 Ontario  .  Canada', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 19, 0, 0), 'enddate': datetime.datetime(2018, 10, 19, 0, 0), 'website': 'https://www.acm.org/publications/proceedings-template', 'deadline': datetime.datetime(2018, 7, 1, 0, 0), 'acceptance': '2018-07-30', 'name': '4th ACM Workshop on Cyber-Physical Systems Security & Privacy', '_id': ObjectId('5b29c41241c95a167c5d11f3')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': '《G20国家科技竞争格局之辩》系列报告发布暨研讨会', 'enName': None, 'tag': 'G20,之辩,研讨会,系列,竞争', 'location': '北京', 'sponsor': None, 'startdate': datetime.datetime(2018, 6, 25, 0, 0), 'enddate': datetime.datetime(2018, 6, 25, 0, 0), 'website': 'http://Clarivate.com.cn', 'deadline': None, 'acceptance': None, 'name': '《G20国家科技竞争格局之辩》系列报告发布暨研讨会', '_id': ObjectId('5b29c41241c95a167c5d11f4')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '15th annual EuroVR conference', 'tag': 'Engineering, Computing & TechnologyAI, Robotics & Automatic ControlInformation Technology & Communications Systems', 'location': '22-23 Oct 2018   .  United Kingdom', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 22, 0, 0), 'enddate': datetime.datetime(2018, 10, 23, 0, 0), 'website': 'http://www.springer.com/lncs', 'deadline': datetime.datetime(2018, 9, 7, 0, 0), 'acceptance': '2018-07-20', 'name': '15th annual EuroVR conference', '_id': ObjectId('5b29c41241c95a167c5d11f5')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'The Model and Data Engineering for Social Good Workshop in Conjunction with The 8th International Conference on  Model and Data Engineering', 'tag': 'MultidisciplinaryEngineering, Computing & TechnologyComputer Science & EngineeringInformation Technology & Communications SystemsMultidisciplinaryMultidisciplinarySocial Work & Social PolicySociology & Social Sciences', 'location': '24 Oct 2018   .  Morocco', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 24, 0, 0), 'enddate': datetime.datetime(2018, 10, 24, 0, 0), 'website': 'https://www.springer.com/gp/computer-science/lncs', 'deadline': datetime.datetime(2018, 5, 30, 0, 0), 'acceptance': '2018-06-30', 'name': 'The Model and Data Engineering for Social Good Workshop in Conjunction with The 8th International Conference on  Model and Data Engineering', '_id': ObjectId('5b29c41241c95a167c5d11f6')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'OCEANS 2018 MTS/IEEE Charleston', 'tag': 'Engineering, Computing & Technology', 'location': '22-25 Oct 2018 South Carolina  .  United States', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 22, 0, 0), 'enddate': datetime.datetime(2018, 10, 25, 0, 0), 'website': 'https://www.aconf.org/conf_157495.html', 'deadline': datetime.datetime(2018, 7, 31, 0, 0), 'acceptance': '2018-06-05', 'name': 'OCEANS 2018 MTS/IEEE Charleston', '_id': ObjectId('5b29c41241c95a167c5d11f7')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': '2019第三届数据挖掘、通信和信息技术国际会议', 'enName': None, 'tag': '数据挖掘', 'location': '北京', 'sponsor': 'APISE', 'startdate': datetime.datetime(2019, 5, 24, 0, 0), 'enddate': datetime.datetime(2019, 5, 26, 0, 0), 'website': 'http://www.dmcit.net/', 'deadline': None, 'acceptance': None, 'name': '2019第三届数据挖掘、通信和信息技术国际会议', '_id': ObjectId('5b29c41241c95a167c5d11f8')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '4th International Conference on Mathematics: Pure, Applied and Computation', 'tag': 'Engineering, Computing & Technology', 'location': '20 Oct 2018   .  Indonesia', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 20, 0, 0), 'enddate': datetime.datetime(2018, 10, 20, 0, 0), 'website': 'http://icompac.its.ac.id/', 'deadline': datetime.datetime(2018, 8, 17, 0, 0), 'acceptance': '2018-09-17', 'name': '4th International Conference on Mathematics: Pure, Applied and Computation', '_id': ObjectId('5b29c41241c95a167c5d11f9')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': '【Ei检索】2019第三届控制工程和人工智能国际会议', 'enName': None, 'tag': '人工智能', 'location': '洛杉矶，美国', 'sponsor': 'APISE', 'startdate': datetime.datetime(2019, 1, 24, 0, 0), 'enddate': datetime.datetime(2019, 1, 26, 0, 0), 'website': 'http://www.cceai.org/', 'deadline': None, 'acceptance': None, 'name': '【Ei检索】2019第三届控制工程和人工智能国际会议', '_id': ObjectId('5b29c41241c95a167c5d11fa')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '2018 International Carnahan Conference on Security Technology', 'tag': 'Engineering, Computing & Technology', 'location': '22-25 Oct 2018 Quebec  .  Canada', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 22, 0, 0), 'enddate': datetime.datetime(2018, 10, 25, 0, 0), 'website': 'https://www.aconf.org/conf_146534.html', 'deadline': datetime.datetime(2018, 7, 2, 0, 0), 'acceptance': '2018-04-30', 'name': '2018 International Carnahan Conference on Security Technology', '_id': ObjectId('5b29c41241c95a167c5d11fb')}
+
+
+2018-06-20 11:03:46 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'International Conference on Information Technology', 'tag': 'Engineering, Computing & TechnologyComputer Science & EngineeringInformation Technology & Communications SystemsComputer Science, Technology & ApplicationsTechnology R & D/Management', 'location': '24-26 Oct 2018 Khon Kaen  .  Thailand', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 24, 0, 0), 'enddate': datetime.datetime(2018, 10, 26, 0, 0), 'website': 'http://it.msu.ac.th/incit2018/', 'deadline': datetime.datetime(2018, 7, 13, 0, 0), 'acceptance': '2018-08-13', 'name': 'International Conference on Information Technology', '_id': ObjectId('5b29c41241c95a167c5d11fc')}
+
+
+2018-06-20 11:03:47 worker.py DEBUG  		清空集合后，集合个数为:0
+
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,tag,location,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,enddate,tag,sponsor,startdate,cnName,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( location,startdate,cnName,website) values(%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:03:47 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( acceptance,enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:21 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:21 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:07:21 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:21 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:07:22 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:22 worker.py INFO  抓取的数据去重后的数量为：20
+2018-06-20 11:07:22 worker.py INFO  当前抓取的数据数量为：20
+2018-06-20 11:07:22 worker.py INFO  抓取的数据去重后的数量为：11
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'Educational Sciences International Conference', 'tag': 'MultidisciplinaryLanguage & LinguisticsEngineering, Computing & TechnologyEngineering MathematicsManagement Science and Engineering', 'location': '25-26 Oct 2018   .  Indonesia', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 25, 0, 0), 'enddate': datetime.datetime(2018, 10, 26, 0, 0), 'website': 'https://www.aconf.org/conf_159913.html', 'deadline': datetime.datetime(2018, 8, 31, 0, 0), 'acceptance': '2018-07-15', 'name': 'Educational Sciences International Conference', '_id': ObjectId('5b29c41241c95a167c5d11fd')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'International Workshop on Artificial Intelligence and Medical Computing for taking care of daily life accident victims', 'tag': 'Engineering, Computing & TechnologyAI, Robotics & Automatic ControlInformation Technology & Communications Systems', 'location': '24-26 Oct 2018   .  Morocco', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 24, 0, 0), 'enddate': datetime.datetime(2018, 10, 26, 0, 0), 'website': 'https://www.aconf.org/conf_159879.html', 'deadline': datetime.datetime(2018, 6, 15, 0, 0), 'acceptance': '2018-06-30', 'name': 'International Workshop on Artificial Intelligence and Medical Computing for taking care of daily life accident victims', '_id': ObjectId('5b29c41241c95a167c5d11fe')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': '华大基因│暑期生物信息学常用技术专题培训班', 'enName': None, 'tag': None, 'location': '深圳', 'sponsor': None, 'startdate': datetime.datetime(2018, 7, 31, 0, 0), 'enddate': None, 'website': 'https://mp.weixin.qq.com/s/YSL-9vB2EtOa0xLqCN1zOw', 'deadline': None, 'acceptance': None, 'name': '华大基因│暑期生物信息学常用技术专题培训班', '_id': ObjectId('5b29c41241c95a167c5d11ff')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '2018 IEEE 7th International Conference on Cloud Networking', 'tag': 'Engineering, Computing & TechnologyComputer Science & EngineeringInformation Technology & Communications Systems', 'location': '22-24 Oct 2018 Tokyo  .  Japan', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 22, 0, 0), 'enddate': datetime.datetime(2018, 10, 24, 0, 0), 'website': 'https://edas.info/N24505', 'deadline': datetime.datetime(2018, 5, 15, 0, 0), 'acceptance': '2018-08-12', 'name': '2018 IEEE 7th International Conference on Cloud Networking', '_id': ObjectId('5b29c41241c95a167c5d1200')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': '11th International Workshop on Network on Chip Architectures', 'tag': 'Engineering, Computing & TechnologyComputer Science & EngineeringInformation Technology & Communications Systems', 'location': '20 Oct 2018   .  Japan', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 20, 0, 0), 'enddate': datetime.datetime(2018, 10, 20, 0, 0), 'website': 'https://www.aconf.org/conf_160179.html', 'deadline': datetime.datetime(2018, 8, 1, 0, 0), 'acceptance': '2018-09-01', 'name': '11th International Workshop on Network on Chip Architectures', '_id': ObjectId('5b29c41241c95a167c5d1201')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'CCBPM 2018 : 2018 International Workshop on Emerging Computing Paradigms and Context in Business Process Management', 'tag': '', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 9, 9, 0, 0), 'enddate': datetime.datetime(2018, 9, 14, 0, 0), 'website': 'http://itseg.org/ccbpm2018/', 'deadline': datetime.datetime(2018, 6, 27, 0, 0), 'acceptance': None, 'name': 'CCBPM 2018 : 2018 International Workshop on Emerging Computing Paradigms and Context in Business Process Management', '_id': ObjectId('5b29c4ea41c95a167c5d1202')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'CELDA  2018 : 15th International Conference on Cognition and Exploratory Learning in Digital Age 2018', 'tag': '', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 21, 0, 0), 'enddate': datetime.datetime(2018, 10, 23, 0, 0), 'website': 'http://www.celda-conf.org/', 'deadline': datetime.datetime(2018, 6, 25, 0, 0), 'acceptance': None, 'name': 'CELDA  2018 : 15th International Conference on Cognition and Exploratory Learning in Digital Age 2018', '_id': ObjectId('5b29c4ea41c95a167c5d1203')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'MRT-SeAC 2018 : The 1st Joint International Workshop on Models@run.time and Self-aware Computing Systems', 'tag': '计算机应用技术', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 9, 3, 0, 0), 'enddate': datetime.datetime(2018, 9, 3, 0, 0), 'website': 'http://st.inf.tu-dresden.de/MRT18-ICAC/', 'deadline': datetime.datetime(2018, 6, 25, 0, 0), 'acceptance': None, 'name': 'MRT-SeAC 2018 : The 1st Joint International Workshop on Models@run.time and Self-aware Computing Systems', '_id': ObjectId('5b29c4ea41c95a167c5d1204')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'International Conference on Innovation in Engineering and Technology', 'tag': 'Engineering, Computing & TechnologyAI, Robotics & Automatic ControlChemical EngineeringComputer Science & EngineeringGeological, Petroleum & Mining EngineeringInformation Technology & Communications SystemsNuclear EngineeringMechanics', 'location': '25-27 Oct 2018   .  Bangladesh', 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 25, 0, 0), 'enddate': datetime.datetime(2018, 10, 27, 0, 0), 'website': 'https://www.aconf.org/conf_159474.html', 'deadline': datetime.datetime(2018, 7, 25, 0, 0), 'acceptance': None, 'name': 'International Conference on Innovation in Engineering and Technology', '_id': ObjectId('5b29c4ea41c95a167c5d1205')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'ICISET : International Conference on Innovations in Science, Engineering and Technology 2018 (ICISET 2018)', 'tag': '', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 27, 0, 0), 'enddate': datetime.datetime(2018, 10, 28, 0, 0), 'website': 'http://www.guide2research.com/?p=10955', 'deadline': datetime.datetime(2018, 6, 25, 0, 0), 'acceptance': None, 'name': 'ICISET : International Conference on Innovations in Science, Engineering and Technology 2018 (ICISET 2018)', '_id': ObjectId('5b29c4ea41c95a167c5d1206')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'SCIS-ISIS 2018 : Joint 10th International Conference on Soft Computing and Intelligent Systems and 19th International Symposium on Advanced Intelligent Systems', 'tag': '人工智能', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 12, 5, 0, 0), 'enddate': datetime.datetime(2018, 12, 8, 0, 0), 'website': 'http://scis2018.j-soft.org', 'deadline': datetime.datetime(2018, 6, 25, 0, 0), 'acceptance': None, 'name': 'SCIS-ISIS 2018 : Joint 10th International Conference on Soft Computing and Intelligent Systems and 19th International Symposium on Advanced Intelligent Systems', '_id': ObjectId('5b29c4ea41c95a167c5d1207')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'RV 2018 : 18th International Conference on Runtime Verification ', 'tag': '', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 10, 0, 0), 'enddate': datetime.datetime(2018, 10, 13, 0, 0), 'website': 'http://www.springer.de/comp/lncs/authors.html', 'deadline': datetime.datetime(2018, 6, 25, 0, 0), 'acceptance': None, 'name': 'RV 2018 : 18th International Conference on Runtime Verification ', '_id': ObjectId('5b29c4ea41c95a167c5d1208')}
+
+
+2018-06-20 11:07:22 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'CISCON 2018 : XV Control Instrumentation System Conference', 'tag': '', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 10, 26, 0, 0), 'enddate': datetime.datetime(2018, 10, 27, 0, 0), 'website': 'http://conference.manipal.edu/ciscon/default.aspx', 'deadline': datetime.datetime(2018, 6, 25, 0, 0), 'acceptance': None, 'name': 'CISCON 2018 : XV Control Instrumentation System Conference', '_id': ObjectId('5b29c4ea41c95a167c5d1209')}
+
+
+2018-06-20 11:07:23 worker.py DEBUG  		清空集合后，集合个数为:0
+
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,location,startdate,website) values(%s,%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:07:23 worker.py INFO  执行sql语句：	insert into ConferenceInfo ( enddate,deadline,enName,tag,startdate,website) values(%s,%s,%s,%s,%s,%s)
+2018-06-20 11:11:00 worker.py INFO  self.flag = True
+
+2018-06-20 11:11:00 worker.py INFO  集合中还剩下 13 条数据
+2018-06-20 11:11:00 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:00 worker.py INFO  抓取的数据去重后的数量为：13
+2018-06-20 11:11:00 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:00 worker.py INFO  抓取的数据去重后的数量为：13
+2018-06-20 11:11:01 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:01 worker.py INFO  抓取的数据去重后的数量为：13
+2018-06-20 11:11:01 worker.py INFO  当前抓取的数据数量为：13
+2018-06-20 11:11:01 worker.py INFO  抓取的数据去重后的数量为：0
+2018-06-20 11:11:01 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'HPML 2018 : High Performance Machine Learning', 'tag': '机器学习', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 9, 24, 0, 0), 'enddate': datetime.datetime(2018, 9, 24, 0, 0), 'website': 'https://hpml2018.github.io/', 'deadline': datetime.datetime(2018, 6, 25, 0, 0), 'acceptance': None, 'name': 'HPML 2018 : High Performance Machine Learning', '_id': ObjectId('5b29c4ea41c95a167c5d120a')}
+
+
+2018-06-20 11:11:01 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'AMGCC  2018 : International Workshop on Autonomic Management of High Performance Grid and Cloud Computing (AMGCC 2018)', 'tag': '云计算', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 9, 7, 0, 0), 'enddate': datetime.datetime(2018, 9, 9, 0, 0), 'website': 'http://htcaas.kisti.re.kr/wiki/index.php/AMGCC18', 'deadline': datetime.datetime(2018, 6, 26, 0, 0), 'acceptance': None, 'name': 'AMGCC  2018 : International Workshop on Autonomic Management of High Performance Grid and Cloud Computing (AMGCC 2018)', '_id': ObjectId('5b29c4ea41c95a167c5d120b')}
+
+
+2018-06-20 11:11:01 worker.py DEBUG  往数据库插入一条数据:
+{'cnName': None, 'enName': 'SYNASC  2018 : 20th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing', 'tag': '', 'location': None, 'sponsor': None, 'startdate': datetime.datetime(2018, 9, 20, 0, 0), 'enddate': datetime.datetime(2018, 9, 23, 0, 0), 'website': 'http://synasc.ro/2018', 'deadline': datetime.datetime(2018, 6, 24, 0, 0), 'acceptance': None, 'name': 'SYNASC  2018 : 20th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing', '_id': ObjectId('5b29c4ea41c95a167c5d120c')}
+
+

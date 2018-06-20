@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/Demo/.idea/Demo.iml" filepath="$USER_HOME$/PycharmProjects/Demo/.idea/Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/crawler.iml" filepath="$PROJECT_DIR$/.idea/crawler.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/realtimecrawler/.idea/realtimecrawler.iml" filepath="$USER_HOME$/PycharmProjects/realtimecrawler/.idea/realtimecrawler.iml" />
     </modules>
   </component>
 </project>

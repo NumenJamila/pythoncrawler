@@ -104,7 +104,7 @@ def extractPrimaryInfoByPQuery(html: str, cfg: dict):
     table = doc(selector)
     doc = Pq(str(table))
     rows = doc(rowselector)
-    rowsoup = BeautifulSoup(str(rows))
+    rowsoup = BeautifulSoup(str(rows), "lxml")
     rows = rowsoup.select(rowselector)  # 得到1个包含表格每行的list集合
     keyinfo = []
     for row in rows:
@@ -348,7 +348,7 @@ class HtmlCodeHandler(Process):
         table = doc(selector)
         doc = Pq(str(table))
         rows = doc(rowselector)
-        rowsoup = BeautifulSoup(str(rows))
+        rowsoup = BeautifulSoup(str(rows), "lxml")
         rows = rowsoup.select(rowselector)  # 得到1个包含表格每行的list集合
         keyinfo = []
         for row in rows:
