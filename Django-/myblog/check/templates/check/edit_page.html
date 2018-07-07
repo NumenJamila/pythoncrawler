@@ -1,0 +1,74 @@
+{% extends 'check/base.html' %}
+
+{% block content %}
+    <div class="ui  vertical very padded segment">
+        <form class="ui form" action="{% url 'check:edit_action' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="article_id" value="{{ article.id | default:'0' }}"/>
+
+          <div class="field">
+            <label>网址</label>
+              <input type="text" name="website" value="{{ article.website }}"/>
+          </div>
+		  <div class="field">
+            <label>中文标题</label>
+              <input type="text" name="cnName" value="{{ article.cnName }}"/>
+          </div>
+          <div class="field">
+            <label>英文标题</label>
+              <input type="text" name="enName" value="{{ article.enName }}"/>
+          </div>
+          <div class="field">
+            <label>简介</label>
+              <input type="text" name="introduce" value="{{ article.introduce }}"/>
+          </div>
+          <div class="field">
+            <label>地点</label>
+              <input type="text" name="location" value="{{ article.location }}"/>
+          </div>
+          <div class="field">
+            <label>举办方</label>
+              <input type="text" name="sponsor" value="{{ article.sponsor }}"/>
+          </div>
+          <div class="field">
+            <label>开始日期</label>
+              <input type="text" name="startdate" value="{{ article.startdate }}"/>
+          </div>
+          <div class="field">
+            <label>结束日期</label>
+              <input type="text" name="enddate" value="{{ article.enddate }}"/>
+          </div>
+          <div class="field">
+            <label>截稿时间</label>
+              <input type="text" name="deadline" value="{{ article.deadline }}"/>
+          </div>
+          <div class="field">
+            <label>img</label>
+              <input type="text" name="image" value="{{ article.image }}"/>
+          </div>
+          <div class="field">
+            <label>tag</label>
+              <input type="text" name="tag_select" value="{{ article.tag }}"/>
+          </div>      
+
+          <div class="inline fields">
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" value="普通">
+                <label>普通</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" value="紧急">
+                <label>紧急</label>
+              </div>
+            </div>
+          </div>
+
+            {#需增加的逻辑：若tag=tag，增checked #}
+          <button class="ui primary button" type="submit">提交</button>
+        </form>
+    </div>
+
+{% endblock content %}

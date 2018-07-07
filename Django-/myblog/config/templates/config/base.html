@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>first web</title>
+        <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
+        <link rel="stylesheet" href="{% static 'css/basic.css' %}">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        
+        <style>
+            .ui.vertical.segment.masthead {
+                background: url({% static 'images/star_banner.jpg' %});
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="ui inverted vertical  segment masthead">
+
+            <h1 class="ui center aligned header blogslogan" style="font-size:50px;font-family: 'Raleway', sans-serif!important;">
+                Bloger
+                <p class="ui sub header">
+                    everyone has a story to tell
+                </p>
+
+            </h1>
+        </div>
+            {% block content %}
+            {% endblock %}
+        <div class="ui inverted vertical very padded  segment">
+            <span class="f-left">Developed by Everfighting&copy</span>
+            <span class="f-middle">
+                <a href="http://everfighting.club/about/" target="_blank">关于我们 .</a>
+                <a href="http://everfighting.club/about/" target="_blank">联系我们</a>
+            </span>
+			<span class="f-right">京ICP备66666666号-6 </span>
+        </div>
+    </body>
+</html>
