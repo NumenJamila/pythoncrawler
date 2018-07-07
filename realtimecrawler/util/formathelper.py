@@ -28,9 +28,8 @@ class DateFormatHelper(object):
         :return:
         """
         res = ""
-        res2 = ""
         if datestr is None:
-            return res, res2
+            return res
         for i in range(0, len(cls.dateformatregexs)):
             try:
                 regex = cls.dateformatregexs[i]
@@ -47,7 +46,7 @@ class DateFormatHelper(object):
                         day = dayrange[0:dayrange.index("-")]
                         day2 = dayrange[dayrange.index("-") + 1:]
                         res = year + "-" + month + "-" + day
-                        res2 = year + "-" + month + "-" + str(day2)
+                        # res2 = year + "-" + month + "-" + str(day2)
                     elif i == 1:
                         items = str(itemstr).split(" ")
                         year = items[len(items) - 1]
@@ -74,9 +73,9 @@ class DateFormatHelper(object):
                             month = cls.monthMap2.get(str(items[0]))
                         dayrange = str(items[1])
                         day = dayrange[0:dayrange.index("-")]
-                        day2 = dayrange[dayrange.index("-")+1:dayrange.index(",")]
+                        # day2 = dayrange[dayrange.index("-")+1:dayrange.index(",")]
                         res = year + "-" + month + "-" + day
-                        res2 = year + "-" + month + "-" + day2
+                        # res2 = year + "-" + month + "-" + day2
                     elif i == 5:
                         for x in range(len(str(itemstr))):
                             if ord(itemstr[x]) > 255:
@@ -88,11 +87,11 @@ class DateFormatHelper(object):
                         res = year + "-" + month + "-" + day
                     else:
                         res = datestr
-                    print(res + "\n" + res2)
+                    print(res)
                     break
             except Exception as e:
                 print("convertStandardDateFormat方法出现异常{}".format(e))
-        return res, res2
+        return res
 
 
 class Conference(object):
@@ -107,6 +106,8 @@ class Conference(object):
         self.website = dic.get("website")
         self.deadline = dic.get("deadline")
         self.acceptance = dic.get("acceptance")
+        self.introduce = dic.get("introduce")
+        self.image = dic.get("image")
         self.name = self.getname()
 
     def getname(self):

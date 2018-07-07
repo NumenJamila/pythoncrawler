@@ -8,9 +8,9 @@ from pymongo import MongoClient
 from util.formathelper import Conference
 
 class MongoDBCRUD(object):
-    uri = "mongodb://root:root123@118.89.59.66:27017/test"
+    uri = "mongodb://root:root123@118.89.59.66:27017/test2"
     connection = MongoClient(uri)
-    db = connection.get_database("test")
+    db = connection.get_database("test2")
     execresultqueue = Queue()
 
     @classmethod

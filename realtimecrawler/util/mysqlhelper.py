@@ -10,7 +10,8 @@ class Mysql(object):
     port = 3306
     user = "root"
     password = "admin123?"
-    db = "pythondb"
+    db = "conf"
+    # db = "pythondb"
     charset = "utf8"
     mysqlexecresultqueue = Queue()
 
@@ -77,12 +78,11 @@ class Mysql(object):
         return affect_line
 
     @staticmethod
-    def deleteById():
+    def deleteBySql(sql):
         connect = pymysql.connect(host=Mysql.host, port=Mysql.port, user=Mysql.user, passwd=Mysql.password,
                                   db=Mysql.db, charset=Mysql.charset)
         cur = connect.cursor()
         affect_line = 0
-        sql = "delete from ConferenceInfo where id = ?"
         try:
             cur.execute(sql)
             connect.commit()
@@ -144,7 +144,12 @@ class Mysql(object):
             return affect_line
 
     @staticmethod
-    def mysql_update(dic: object, table: str, fields: set, website: str):
+    def mysql_update(obj: object, table: str, fields: set):
+        # 获取对象字段字典
+        try:
+            dic = obj.__dict__
+        except:
+            dic = obj
         keys = list(dic.keys())
         # 删除对象字段字典中值为None的键值对
         for k in keys:
@@ -173,48 +178,6 @@ class Mysql(object):
             for i in range(0, len(keys)):
                 params.append(dic.get(keys[i]))
             params.append(dic.get("website"))
-            print(params)
-            cur.execute(sql, tuple(params))
-            connect.commit()
-            affect_line = cur.rowcount
-        except Exception as e:
-            print("mysql更新数据出现异常：{}".format(e))
-            queue.put("mysql执行语句： {} 时出现异常\n异常原因： {}\n".format(sql, e))
-            connect.rollback()
-        finally:
-            connect.close()
-            return affect_line
-
-    @staticmethod
-    def mysql_update(dic: object, table: str, fields: set, website: str):
-        keys = list(dic.keys())
-        # 删除对象字段字典中值为None的键值对
-        for k in keys:
-            if dic.get(k) is None:
-                dic.pop(k)
-        # 获取要插入到数据库的非None字段
-        keys = list(dic.keys() & fields)
-        connect = pymysql.connect(host=Mysql.host, port=Mysql.port, user=Mysql.user, passwd=Mysql.password,
-                                  db=Mysql.db, charset=Mysql.charset)
-        cur = connect.cursor()
-        affect_line = 0
-        sql = "update {} ".format(table)
-        sql += "set "
-        for i in range(0, len(keys)):
-            sql += keys[i]
-            if i < len(keys) - 1:
-                sql += "=%s,"
-            else:
-                sql += "=%s "
-        sql += "where website=%s"
-        queue = Mysql.mysqlexecresultqueue
-        try:
-            queue.put("执行sql语句：\t{}".format(sql))
-            print("执行sql语句：\t{}".format(sql))
-            params = []
-            for i in range(0, len(keys)):
-                params.append(dic.get(keys[i]))
-            params.append(website)
             print(params)
             cur.execute(sql, tuple(params))
             connect.commit()
