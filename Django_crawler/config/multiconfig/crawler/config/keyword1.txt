@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+
+# 配置文件键值对中如果要表示%，请用"%%"代替"%"
+
+# base_url字段表示被抓取网页url，url变化部分用{}代替
+
+[keys]
+
+tag = null
+
+sponsor = 主办单位
+
+enddate = 大会时间,会议时间
+
+deadline = 截止日期
+
+website = 大会官网,大会网站,官方网址
+
+[other]
+
+language = cn
+
+enddateformat1 = 至[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}
+
+renddateformat1 = [0-9]{4}-[0-9]{1,2}-[0-9]{1,2}
+
+deadlineformat1 = ?

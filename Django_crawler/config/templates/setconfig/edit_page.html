@@ -1,0 +1,107 @@
+{% extends 'conferenceinfo/base.html' %}
+
+{% block content %}
+    <div class="ui  vertical very padded segment">
+        <form class="ui form" action="{% url 'setconfig:edit_action' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="conf_id" value="{{ conf.id | default:'0' }}"/>
+          <div class="field">
+            <label>任务名称</label>
+              <input type="text" name="taskname" value="{{ conf.taskname }}"/>
+          </div>
+          <div class="field">
+            <label>请求网址</label>
+              <input type="text" name="req_url" value="{{ conf.req_url }}"/>
+          </div>
+          <div class="field">
+            <label>网址选择器</label>
+              <input type="text" name="website_select" value="{{ conf.website_select }}"/>
+          </div>
+          <div class="field">
+            <label>网址正则</label>
+              <input type="text" name="website_reg" value="{{ conf.website_reg }}"/>
+          </div>
+		      <div class="field">
+            <label>中文标题选择器</label>
+              <input type="text" name="cnName_select" value="{{ conf.cnName_select }}"/>
+          </div>
+          <div class="field">
+            <label>中文标题正则</label>
+              <input type="text" name="cnName_reg" value="{{ conf.cnName_reg  }}"/>
+          </div>
+          <div class="field">
+            <label>英文标题选择器</label>
+              <input type="text" name="enName_select" value="{{ conf.enName_select }}"/>
+          </div>
+          <div class="field">
+            <label>英文标题正则器</label>
+              <input type="text" name="enName_reg" value="{{ conf.enName_reg }}"/>
+          </div>
+          <div class="field">
+            <label>简介选择器</label>
+              <input type="text" name="introduce_select" value="{{ conf.introduce_select }}"/>
+          </div>
+          <div class="field">
+            <label>简介正则</label>
+              <input type="text" name="introduce_reg" value="{{ conf.introduce_reg }}"/>
+          </div>
+          <div class="field">
+            <label>地点选择器</label>
+              <input type="text" name="location_select" value="{{ conf.location_select }}"/>
+          </div>
+          <div class="field">
+            <label>地点正则</label>
+              <input type="text" name="location_reg" value="{{ conf.location_reg }}"/>
+          </div>
+          <div class="field">
+            <label>举办方选择器</label>
+              <input type="text" name="sponsor_select" value="{{ conf.sponsor_select }}"/>
+          </div>
+          <div class="field">
+            <label>举办方正则</label>
+              <input type="text" name="sponsor_reg" value="{{ conf.sponsor_reg }}"/>
+          </div>
+          <div class="field">
+            <label>开始日期选择器</label>
+              <input type="text" name="startdate_select" value="{{ conf.startdate_select }}"/>
+          </div>
+          <div class="field">
+            <label>开始日期正则</label>
+              <input type="text" name="startdate_reg" value="{{ conf.startdate_reg }}"/>
+          </div><div class="field">
+            <label>结束日期选择器</label>
+              <input type="text" name="enddate_select" value="{{ conf.enddate_select }}"/>
+          </div>
+          <div class="field">
+            <label>结束日期正则</label>
+              <input type="text" name="enddate_reg" value="{{ conf.enddate_reg }}"/>
+          </div>
+          <div class="field">
+            <label>截稿时间选择器</label>
+              <input type="text" name="deadline_select" value="{{ conf.deadline_select }}"/>
+          </div>
+          <div class="field">
+            <label>截稿时间正则</label>
+              <input type="text" name="deadline_reg" value="{{ conf.deadline_reg }}"/>
+          </div>
+          <div class="field">
+            <label>img选择器</label>
+              <input type="text" name="image_select" value="{{ conf.image_select }}"/>
+          </div>
+          <div class="field">
+            <label>img选择器</label>
+              <input type="text" name="image_reg" value="{{ conf.image_reg }}"/>
+          </div>
+          <div class="field">
+            <label>tag选择器</label>
+              <input type="text" name="tag_select" value="{{ conf.tag_select }}"/>
+          </div>
+          <div class="field">
+            <label>tag正则</label>
+              <input type="text" name="tag_reg" value="{{ conf.tag_reg }}"/>
+          </div>
+          <button class="ui primary button" type="submit">提交</button>
+        </form>
+    </div>
+
+{% endblock content %}

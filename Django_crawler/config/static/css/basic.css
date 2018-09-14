@@ -1,0 +1,48 @@
+h1 {
+    font-family:'Oswald', sans-serif!important;
+    font-size:30px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size:18px;
+}
+
+.ui.vertical.segment.masthead {
+    height: 300px;
+    background-size: cover;
+    background-position: 100% 80%;
+}
+
+.ui.container.segment {
+    width: 800px;
+}
+
+.ui.center.aligned.header.blogslogan {
+    margin-top: 40px;
+}
+
+.ui.center.aligned.header.blogslogan p {
+    margin-top: 10px;
+    color: white;
+    font-size: 10px;
+}
+.ui.container.nav {
+    width: 500px;
+}
+
+.f-left {
+  margin-left: 100px;
+}
+
+.f-middle {
+  margin-left: 250px;
+  margin-right: 200px;
+}
+.f-right {
+  margin-right: 100px;
+}

@@ -1,0 +1,25 @@
+{% extends 'conferenceinfo/base.html' %}
+
+{% block content %}
+    <div class="ui  vertical very padded segment">
+        <form class="ui form" action="{% url 'multiconfig:edit_action' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="conf_id" value="{{ conf.id | default:'0' }}"/>
+
+          <div class="field">
+            <label>任务名称</label>
+              <input type="text" name="taskname" value="{{ conf.taskname }}"/>
+          </div>
+          <div class="field">
+            <label>conf路径</label>
+              <input type="text" name="confConfigFileNames" value="{{ conf.confConfigFileNames }}"/>
+          </div>
+          <div class="field">
+            <label>txt路径</label>
+              <input type="text" name="txtConfigFileNames" value="{{ conf.txtConfigFileNames }}"/>
+          </div>
+          <button class="ui primary button" type="submit">提交</button>
+        </form>
+    </div>
+
+{% endblock content %}

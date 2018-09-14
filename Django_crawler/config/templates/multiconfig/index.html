@@ -1,0 +1,64 @@
+{% extends 'conferenceinfo/base.html' %}
+
+{% block content %}
+<ul id="menu" class="mfb-component--br mfb-zoomin" data-mfb-toggle="hover">
+  <li class="mfb-component__wrap">
+    <a href="#" class="mfb-component__button--main">
+      <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+      <i class="mfb-component__main-icon--active ion-close-round"></i>
+    </a>
+    <ul class="mfb-component__list">
+      <li>
+        <a href="{%  url 'multiconfig:newconfigfile' %}" data-mfb-label="新建一个列表配置文件" class="mfb-component__button--child">
+          <i class="mfb-component__child-icon ion-social-pinterest"></i>
+        </a>
+      </li>
+      <li>
+        <a href="{%  url 'multiconfig:newconf' %}" data-mfb-label="新建配置文件文本" class="mfb-component__button--child">
+          <i class="mfb-component__child-icon ion-social-pagelines"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+           data-mfb-label="Child Button 3" class="mfb-component__button--child">
+          <i class="mfb-component__child-icon ion-social-tumblr"></i>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+    <div class="ui divider"></div>
+    <div class="ui vertical very padded segment">
+        <h1 class="ui header"></h1>
+        {% for conf in confs %}
+            <div class="ui container vertical segment">
+                <a href="{% url 'multiconfig:setconfig_page' conf.id %}">
+                    <h1 class="ui header">
+                       {{ conf.taskname }}
+                    </h1>
+                </a>
+                <p>
+                   {{ conf.confConfigFileNames }}
+                </p>
+                <p>
+                   {{ conf.txtConfigFileNames }}
+                </p>
+
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="ui vertical very padded segment">
+        {# configs.paginator.page_range 这个函数返回包含一个所有页码数的 range 对象 #}
+        {# 即 range(1, configs.paginator.num_pages + 1) #}
+      <div class="ui pagination menu">
+          {% for page_number in configs.paginator.page_range %}
+            {% ifequal page_number  configs.number %}
+              {{ page_number }}
+            {% else %}
+              <a href="?page={{ page_number }}" class="item">{{ page_number }}</a>
+            {% endifequal %}
+          {% endfor %}
+      </div>
+    </div>
+{% endblock content %}

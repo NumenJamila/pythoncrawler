@@ -1,0 +1,115 @@
+{% extends 'conferenceinfo/base.html' %}
+
+{% block content %}
+    <div class="ui vertical very padded segment">
+        <label>任务名称</label>
+        <div class="ui container">
+            {{ conf.taskname }}
+        </div>
+        <label>请求网址</label>
+        <div class="ui container">
+            {{ conf.req_url }}
+        </div>
+        <label>网址选择器</label>
+        <div class="ui container">
+            {{ conf.website_select }}
+        </div>
+        <label>网址正则</label>
+        <div class="ui container">
+            {{ conf.website_reg }}
+        </div>
+        <label>中文标题选择器</label>
+        <div class="ui container">
+            {{ conf.cnName_select }}
+        </div>
+        <label>中文标题正则</label>
+        <div class="ui container">
+            {{ conf.cnName_reg }}
+        </div>
+        <label>英文标题选择器</label>
+        <div class="ui container">
+            {{ conf.enName_select }}
+        </div>
+        <label>英文标题正则</label>
+        <div class="ui container">
+            {{ conf.enName_reg }}
+        </div>
+        <label>会议简介选择器</label>
+        <div class="ui container">
+            {{ conf.introduce_select }}
+        </div>
+        <label>会议简介正则</label>
+        <div class="ui container">
+            {{ conf.introduce_reg }}
+        </div>
+        <label>会议地址选择器</label>
+        <div class="ui container">
+            {{ conf.location_select }}
+        </div>
+        <label>会议地址正则</label>
+        <div class="ui container">
+            {{ conf.location_reg }}
+        </div>
+        <label>会议开始时间选择器</label>
+        <div class="ui container">
+            {{ conf.startdate_select }}
+        </div>
+        <label>会议开始时间正则</label>
+        <div class="ui container">
+            {{ conf.startdate_reg }}
+        </div>
+        <label>会议结束时间选择器</label>
+        <div class="ui container">
+            {{ conf.enddate_select }}
+        </div>
+        <label>会议结束时间正则</label>
+        <div class="ui container">
+            {{ conf.enddate_reg }}
+        </div>
+        <label>会议截稿时间选择器</label>
+        <div class="ui container">
+            {{ conf.deadline_select }}
+        </div>
+        <label>会议截稿时间正则</label>
+        <div class="ui container">
+            {{ conf.deadline_reg }}
+        </div>
+        <label>图片地址选择器</label>
+        <div class="ui container">
+            {{ conf.image_select }}
+        </div>
+        <label>图片地址正则</label>
+        <div class="ui container">
+            {{ conf.image_reg }}
+        </div>
+        <label>标签选择器</label>
+        <div class="ui container">
+            {{ conf.tag_select }}
+        </div>
+        <label>标签正则</label>
+        <div class="ui container">
+            {{ conf.tag_reg }}
+        </div>
+        <div class="ui button">
+            <a href="{% url 'setconfig:edit_page' conf.id %}">
+                修改配置文件
+            </a>
+        </div>
+
+        <div class="ui button">
+            <a href="{% url 'setconfig:del_page' conf.id %}">
+                删除配置文件
+            </a>
+        </div>
+        <div class="ui button">
+            <a href="{% url 'setconfig:check' conf.id %}">
+                验证配置文件
+            </a>
+        </div>
+        <div class="ui button">
+            <a href="{% url 'setconfig:input' conf.id %}">
+                数据入库
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'conferenceinfo/base.html' %}
+
+{% block content %}
+    <div class="ui  vertical very padded segment">
+        <form class="ui form" action="{% url 'conferenceinfo:edit_action' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="conference_id" value="{{ conference.id | default:'0' }}"/>
+
+          <div class="field">
+            <label>网址</label>
+              <input type="text" name="website" value="{{ conference.website }}"/>
+          </div>
+		      <div class="field">
+            <label>中文标题</label>
+              <input type="text" name="cnName" value="{{ conference.cnName }}"/>
+          </div>
+          <div class="field">
+            <label>英文标题</label>
+              <input type="text" name="enName" value="{{ conference.enName }}"/>
+          </div>
+          <div class="field">
+            <label>简介</label>
+              <input type="text" name="introduce" value="{{ conference.introduce }}"/>
+          </div>
+          <div class="field">
+            <label>地点</label>
+              <input type="text" name="location" value="{{ conference.location }}"/>
+          </div>
+          <div class="field">
+            <label>举办方</label>
+              <input type="text" name="sponsor" value="{{ conference.sponsor }}"/>
+          </div>
+          <div class="field">
+            <label>开始日期</label>
+              <input type="text" name="startdate" value="{{ conference.startdate|date:'Y-m-d' }}"/>
+          </div>
+          <div class="field">
+            <label>结束日期</label>
+              <input type="text" name="enddate" value="{{ conference.enddate|date:'Y-m-d' }}"/>
+          </div>
+          <div class="field">
+            <label>截稿时间</label>
+              <input type="text" name="deadline" value="{{ conference.deadline|date:'Y-m-d' }}"/>
+          </div>
+          <div class="field">
+            <label>img</label>
+              <input type="text" name="image" value="{{ conference.image }}"/>
+          </div>
+          <div class="field">
+            <label>tag</label>
+              <input type="text" name="tag" value="{{ conference.tag }}"/>
+          </div>      
+
+          <button class="ui primary button" type="submit">提交</button>
+        </form>
+    </div>
+
+{% endblock content %}

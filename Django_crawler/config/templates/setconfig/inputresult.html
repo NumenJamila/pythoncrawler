@@ -1,0 +1,66 @@
+{% extends 'conferenceinfo/base.html' %}
+{% block content %}
+<div class="ui vertical very padded segment">
+		<label>数据源任务</label>
+        <div class="ui container">
+            {{ info_dict.taskname }}
+        </div>
+        <label>会议网址</label>
+        <div class="ui container">
+            {{ info_dict.website }}
+        </div>
+        {% if info_dict.cnName %}
+        <label>中文标题</label>
+        <div class="ui container">
+            {{ info_dict.cnName }}
+        </div>
+        {% endif %}
+        {% if info_dict.enName %}
+        <label>英文标题</label>
+        <div class="ui container">
+            {{ info_dict.enName }}
+        </div>
+        {% endif %}
+        {% if info_dict.introduce %}
+        <label>会议简介</label>
+        <div class="ui container">
+            {{ info_dict.introduce }}
+        </div>
+        {% endif %}
+        {% if info_dict.location %}
+        <label>会议地点</label>
+        <div class="ui container">
+            {{ info_dict.location }}
+        </div>
+        {% endif %}
+        {% if info_dict.startdate %}
+        <label>会议开始时间</label>
+        <div class="ui container">
+            {{ info_dict.startdate|date:'Y-m-d' }}
+        </div>
+        {% endif %}
+        {% if info_dict.enddate %}
+        <label>会议结束时间</label>
+        <div class="ui container">
+            {{ info_dict.enddate|date:'Y-m-d' }}
+        </div>
+        {% endif %}
+        {% if info_dict.deadline %}
+        <label>截稿时间</label>
+        <div class="ui container">
+            {{ info_dict.deadline|date:'Y-m-d' }}
+        </div>
+        {% endif %}
+        {% if info_dict.image %}
+        <label>图片地址</label>
+        <div class="ui container">
+            {{ info_dict.image }}
+        </div>
+        {% endif %}
+        {% if info_dict.tag %}
+        <label>标签</label>
+        <div class="ui container">
+            {{ info_dict.tag }}
+        </div>
+        {% endif %}
+{% endblock content %}

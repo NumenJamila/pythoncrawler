@@ -1,0 +1,83 @@
+{% extends 'conferenceinfo/base.html' %}
+
+
+{% block content %}
+<ul id="menu" class="mfb-component--br mfb-zoomin" data-mfb-toggle="hover">
+  <li class="mfb-component__wrap">
+    <a href="#" class="mfb-component__button--main">
+      <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+      <i class="mfb-component__main-icon--active ion-close-round"></i>
+    </a>
+    <ul class="mfb-component__list">
+      <li>
+        <a href="{%  url 'conferenceinfo:newconference' %}" data-mfb-label="发布一个会议" class="mfb-component__button--child">
+          <i class="mfb-component__child-icon ion-social-pinterest"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-mfb-label="Child Button 2" class="mfb-component__button--child">
+          <i class="mfb-component__child-icon ion-social-pagelines"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+           data-mfb-label="Child Button 3" class="mfb-component__button--child">
+          <i class="mfb-component__child-icon ion-social-tumblr"></i>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+    <div class="ui divider"></div>
+    	{% if error_content %}
+    		<p>{{ error_content }}</p>
+		{% endif %}
+    <div class="ui vertical very padded segment">
+        <h1 class="ui header"></h1>
+        {% for conference in conferences %}
+            <div class="ui container vertical segment">
+                <a href="{% url 'conferenceinfo:conference_page' conference.id %}">
+                    {% if conference.cnName %}
+                    <h1 class="ui header">
+                       {{ conference.cnName }}
+                    </h1>
+                    {% endif %}
+                    {% if conference.enName %}
+                    <h1 class="ui header">
+                       {{ conference.enName }}
+                    </h1>
+                    {% endif %}
+                    <h3 class="ui header">
+                       {{ conference.website }}
+                    </h1>
+                </a>
+
+                <i class="icon grey small unhide">10,000</i>
+                <p>
+                    {{ conference.introduce|truncatewords:30 }}
+                    <a href="{% url 'conferenceinfo:conference_page' conference.id %}">
+                        <i class="angle tiny double grey right icon">READMORE</i>
+                    </a>
+                </p>
+
+                <div class="ui mini  tag label">
+                    {{ conference.tag }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="ui vertical very padded segment">
+        {# articles.paginator.page_range 这个函数返回包含一个所有页码数的 range 对象 #}
+        {# 即 range(1, articles.paginator.num_pages + 1) #}
+      <div class="ui pagination menu">
+          {% for page_number in articles.paginator.page_range %}
+            {% ifequal page_number  articles.number %}
+              {{ page_number }}
+            {% else %}
+              <a href="?page={{ page_number }}" class="item">{{ page_number }}</a>
+            {% endifequal %}
+          {% endfor %}
+      </div>
+    </div>
+{% endblock content %}

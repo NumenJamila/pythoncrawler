@@ -1,0 +1,87 @@
+{% extends 'conferenceinfo/base.html' %}
+
+{% block content %}
+    <div class="ui vertical very padded segment">
+        <label>会议ID</label>
+        <div class="ui container">
+            {{ conference.id }}
+        </div>
+        {% if conference.taskname %}
+        <label>数据源任务</label>
+        <div class="ui container">
+            {{ conference.taskname }}
+        </div>
+        {% endif %}
+        {% if conference.website %}
+        <label>会议网址</label>
+        <div class="ui container">
+            {{ conference.website }}
+        </div>
+        {% endif %}
+        {% if conference.cnName %}
+        <label>中文标题</label>
+        <div class="ui container">
+            {{ conference.cnName }}
+        </div>
+        {% endif %}
+        {% if conference.enName %}
+        <label>英文标题</label>
+        <div class="ui container">
+            {{ conference.enName }}
+        </div>
+        {% endif %}
+        {% if conference.introduce %}
+        <label>会议简介</label>
+        <div class="ui container">
+            {{ conference.introduce }}
+        </div>
+        {% endif %}
+        {% if conference.location %}
+        <label>会议地点</label>
+        <div class="ui container">
+            {{ conference.location }}
+        </div>
+        {% endif %}
+        {% if conference.startdate %}
+        <label>会议开始时间</label>
+        <div class="ui container">
+            {{ conference.startdate|date:'Y-m-d' }}
+        </div>
+        {% endif %}
+        {% if conference.enddate %}
+        <label>会议结束时间</label>
+        <div class="ui container">
+            {{ conference.enddate|date:'Y-m-d' }}
+        </div>
+        {% endif %}
+        {% if conference.deadline %}
+        <label>截稿时间</label>
+        <div class="ui container">
+            {{ conference.deadline|date:'Y-m-d' }}
+        </div>
+        {% endif %}
+        {% if conference.image %}
+        <label>图片地址</label>
+        <div class="ui container">
+            {{ conference.image }}
+        </div>
+        {% endif %}
+        {% if conference.tag %}
+        <label>标签</label>
+        <div class="ui container">
+            {{ conference.tag }}
+        </div>
+        {% endif %}
+        <div class="ui button">
+            <a href="{% url 'conferenceinfo:edit_page' conference.id %}">
+                修改会议
+            </a>
+        </div>
+
+        <div class="ui button">
+            <a href="{% url 'conferenceinfo:del_page' conference.id %}">
+                删除会议
+            </a>
+        </div>
+    </div>
+{% endblock %}
